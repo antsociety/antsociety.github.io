@@ -1,0 +1,169 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Viga', sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, p {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+header {
+  background-color: #333;
+  padding: 1.4em;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__links {
+  color: #e1e1e1;
+}
+
+.header__link {
+  background: none;
+  border: 0;
+  font-family: 'Viga', sans-serif;
+  font-size: 1em;
+  text-transform: uppercase;
+  color: #e1e1e1;
+  text-decoration: none;
+}
+
+.hero__title {
+  padding: 1em 0;
+  color: #e1e1e1;
+}
+
+.hero__image {
+  display: block;
+  margin: 0 auto;
+  height: 200px;
+}
+
+.hero__text {
+  color: #e1e1e1;
+  padding: 2em 0 0;
+}
+
+footer {
+  background-color: #999;
+  padding: 1.4em;
+  color: #333;
+}
+
+.footer__text {
+  padding-bottom: 5em;
+}
+
+.footer__contact {
+  color: #e1e1e1;
+}
+
+.footer__link {
+  color: #333;
+}
+
+@media (min-width: 415px) {
+  header {
+    height: 60vh;
+    text-align: center;
+  }
+  .hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .hero__title,
+  .hero__text {
+    width: 70%;
+    margin: 0 auto;
+  }
+  footer {
+    height: 40vh;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+  }
+  .footer__text {
+    width: 70%;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+  }
+  .hero__title {
+    font-size: 2em;
+    text-align: right;
+    flex: 1;
+  }
+  .hero__section {
+    flex: 2;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .hero__image {
+    height: 200px;
+  }
+  .hero__text {
+    font-size: 1.2em;
+    text-align: right;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+  }
+  .hero__title {
+    text-align: left;
+    flex: 1;
+    justify-content: center;
+    display: flex;
+    font-size: 56px;
+  }
+  .hero__image {
+    height: 250px;
+    margin: inherit;
+  }
+  .hero__section {
+    height: 50vh;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    flex: 1;
+    padding-right: 6em;
+  }
+  .hero__text {
+    margin: inherit;
+  }
+  .footer__text {
+    font-size: 1.2em;
+    text-align: right;
+    width: 30%;
+    margin-left: auto;
+    padding-right: 6em;
+  }
+  .footer__hello {
+    margin-right: auto;
+    padding-left: 2em;
+    text-align: left;
+  }
+}
