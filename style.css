@@ -8,6 +8,10 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  background-color: #999;
+}
+
 body, h1, h2, p {
   margin: 0;
   padding: 0;
@@ -16,7 +20,7 @@ body, h1, h2, p {
 
 header {
   background-color: #333;
-  padding: 1.4em;
+  padding: 5em 5em 0;
 }
 
 .header {
@@ -28,43 +32,61 @@ header {
   color: #e1e1e1;
 }
 
-.header__link {
+.header__button {
   background: none;
   border: 0;
-  font-family: 'Viga', sans-serif;
-  font-size: 1em;
-  text-transform: uppercase;
   color: #e1e1e1;
-  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Viga', sans-serif;
+  font-size: 1.2em;
+}
+
+.hero {
+  padding-top: 3em;
+  display: flex;
+  align-items: flex-start;
 }
 
 .hero__title {
-  padding: 1em 0;
+  flex: 2;
   color: #e1e1e1;
+  font-size: 3.6em;
+  text-align: right;
+  justify-content: center;
+  display: flex;
+
 }
 
-.hero__image {
-  display: block;
-  margin: 0 auto;
-  height: 200px;
+.hero__section {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1em;
 }
 
 .hero__text {
   color: #e1e1e1;
-  padding: 2em 0 0;
+  font-size: 1.4em;
+  text-align: right;
+  padding-top: 2em;
+}
+
+.hero__image {
+  height: 300px;
+  margin-left: auto;
 }
 
 footer {
-  background-color: #999;
-  padding: 1.4em;
-  color: #333;
+  height: 30vh;
+  padding: 0 5em 1em;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
 }
 
-.footer__text {
-  padding-bottom: 5em;
-}
-
-.footer__contact {
+.footer__hello {
+  flex: 2;
+  align-self: flex-end;
   color: #e1e1e1;
 }
 
@@ -72,98 +94,82 @@ footer {
   color: #333;
 }
 
-@media (min-width: 415px) {
-  header {
-    height: 60vh;
-    text-align: center;
-  }
-  .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  .hero__title,
-  .hero__text {
-    width: 70%;
-    margin: 0 auto;
-  }
-  footer {
-    height: 40vh;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-  }
-  .footer__text {
-    width: 70%;
-  }
+.footer__text {
+  padding-top: 1em;
+  font-size: 1.4em;
+  flex: 2;
+  text-align: right;
+  color: #333;
 }
 
-@media (min-width: 768px) {
-  .hero {
-    flex-direction: row;
-    align-items: center;
-  }
+@media (max-width: 1292px) {
   .hero__title {
     font-size: 2em;
-    text-align: right;
-    flex: 1;
-  }
-  .hero__section {
-    flex: 2;
-    justify-content: space-between;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
   }
   .hero__image {
-    height: 200px;
+    height: 180px;
   }
   .hero__text {
-    font-size: 1.2em;
-    text-align: right;
+    font-size: 1em;
+  }
+  .footer__text {
+    font-size: 1em;
   }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 826px) {
+  header {
+    padding: 2em 2em 0;
+  }
   .hero {
-    justify-content: space-around;
-    display: flex;
+    flex-direction: column;
     align-items: center;
+    padding-top: 0;
   }
   .hero__title {
-    text-align: left;
-    flex: 1;
-    justify-content: center;
-    display: flex;
-    font-size: 56px;
+    text-align: center;
   }
   .hero__image {
-    height: 250px;
-    margin: inherit;
-  }
-  .hero__section {
-    height: 50vh;
-    justify-content: space-evenly;
-    align-items: flex-end;
-    flex: 1;
-    padding-right: 6em;
+    margin: 1em auto;
   }
   .hero__text {
-    margin: inherit;
+    text-align: center;
+    padding: 2em 4em 0;
+  }
+  footer {
+    flex-direction: column;
+    
+  }
+  .footer__text {
+    text-align: center;
+  }
+  .footer__hello {
+    align-self: center;
+    text-align: center;
+  }
+}
+
+@media (max-width: 420px) {
+  header {
+    padding: 1em;
+  }
+  .hero__title {
+    padding-top: 1em;
+  }
+  .hero__text {
+    font-size: 1.2em;
+    padding: 2em 0 1em;
+  }
+  footer {
+    padding: 0 2em;
+    height: auto;
   }
   .footer__text {
     font-size: 1.2em;
-    text-align: right;
-    width: 30%;
-    margin-left: auto;
-    padding-right: 6em;
+    padding-top: 1em;
   }
   .footer__hello {
-    margin-right: auto;
-    padding-left: 2em;
-    text-align: left;
+    padding-top: 3em;
+    padding-bottom: 1em;
   }
 }
