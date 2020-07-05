@@ -185,3 +185,7 @@ footer {
   opacity: 0;
   display: inline-block;
 }
+
+#particles-js {
+  position: absolute;
+}
