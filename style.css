@@ -56,7 +56,13 @@ header {
   text-align: left;
   justify-content: center;
   display: flex;
+  transition: .8s;
+}
 
+.hero__title:hover {
+  text-shadow:
+  0 0 5px #aaa,
+  0 0 10px #bbb;
 }
 
 .hero__section {
@@ -177,12 +183,6 @@ footer {
     padding-top: 3em;
     padding-bottom: 1em;
   }
-}
-
-.one .letter,
-.two .letter,
-.three .letter {
-  opacity: 0;
 }
 
 #particles-js {
