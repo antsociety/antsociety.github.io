@@ -24,8 +24,10 @@ header {
 }
 
 .header {
+  opacity: 0;
   display: flex;
   justify-content: space-between;
+  animation: reveal .4s ease-in forwards;
 }
 
 .header__links {
@@ -183,4 +185,16 @@ footer {
 .two .letter,
 .three .letter {
   display: inline-block;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
