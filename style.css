@@ -183,7 +183,6 @@ footer {
 .two .letter,
 .three .letter {
   opacity: 0;
-  display: inline-block;
 }
 
 #particles-js {
