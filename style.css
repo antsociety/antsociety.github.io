@@ -33,6 +33,7 @@ header {
 }
 
 .header__button {
+  cursor: pointer;
   background: none;
   border: 0;
   color: #e1e1e1;
