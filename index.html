@@ -31,79 +31,9 @@
     </header>
     <footer></footer>
   </main>
+  <script src="main.js"></script>
   <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   <script>
-    const buttons = document.querySelectorAll('button')
-    Array.from(buttons).map(function(item) {
-      item.addEventListener('click', function(e) {
-        if(e.target.innerText === 'EN') {
-          renderHero(texts, hero)
-          renderFooter(texts, footer)
-        } else {
-          renderHero(textos, hero)
-          renderFooter(textos, footer)
-        }
-      })
-    })
-
-    const texts = {
-      heroTitle1: 'Custom',
-      heroTitle2: 'web development',
-      heroTitle3: 'solutions!',
-      heroText: 'We are a collective  focused in transforming ideas into products that add value to your user through memorable experiences.',
-      footerText: 'We take care of your projects, in an organic way from the conception, delivering fast and avoiding resources waste.',
-      footerHello: 'Lets build something awesome?'
-    }
-
-    const textos = {
-      heroTitle1: 'Soluções em',
-      heroTitle2: 'desenvolvimento web',
-      heroTitle3: 'sob medida!',
-      heroText: 'Somos um coletivo focado em transformar idéias, em produtos que agreguem valor ao usuário, por meio de experiências memoráveis.',
-      footerText: 'Cuidamos do seu projeto de forma orgânica desde a concepção, realizando entregas agéis e evitando disperdício de recursos.',
-      footerHello: 'Vamos construir algo incrível?'
-    }
-
-    function createHero(texts) {
-      return (`
-        <h1 class="hero__title">
-          <p>${texts.heroTitle1}</p>
-          <p>${texts.heroTitle2}</p>
-          <p>${texts.heroTitle3}</p>
-        </h1>
-        <section class="hero__section">
-          <img class="hero__image" src="/hero.svg" alt="Hero">
-          <p class="hero__text">${texts.heroText}</p>
-        </section>
-      `)
-    }
-
-    function createFooter(texts) {
-      return (`
-        <p class="footer__text">${texts.footerText}</p>
-        <div class="footer__hello">
-          <p class="footer__contact">${texts.footerHello}</p>
-          <a class="footer__link" href="mailto:hello@antsociety.dev">hello@antsociety.dev</a>
-        </div>
-      `)
-    }
-
-    function renderHero(texts, element) {
-      const markup = createHero(texts)
-      element.innerHTML = markup
-    }
-
-    function renderFooter(texts, element) {
-      const markup2 = createFooter(texts)
-      element.innerHTML = markup2
-    }
-
-    const hero = document.querySelector('.hero')
-    const footer = document.querySelector('footer')
-
-    renderHero(textos, hero)
-    renderFooter(textos, footer)
-    
     particlesJS("particles-js", {"particles":{"number":{"value":160,"density":{"enable":true,"value_area":800}},"color":{"value":"#ffffff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.15782952832645453,"random":true,"anim":{"enable":true,"speed":1,"opacity_min":0,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":4,"size_min":0.3,"sync":false}},"line_linked":{"enable":false,"distance":150,"color":"#ffffff","opacity":0.4,"width":1},"move":{"enable":true,"speed":1,"direction":"none","random":true,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":600}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"bubble"},"onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":250,"size":0,"duration":2,"opacity":0,"speed":3},"repulse":{"distance":400,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles; count_particles = document.querySelector('.js-count-particles');
   </script>
 </body>
