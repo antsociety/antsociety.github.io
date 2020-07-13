@@ -30,6 +30,7 @@ header {
 
 .header__links {
   color: #e1e1e1;
+  z-index: 9;
 }
 
 .header__button {
@@ -111,6 +112,11 @@ footer {
   color: #333;
 }
 
+.cube {
+  display: flex;
+  justify-content: flex-end;
+}
+
 @media (max-width: 1292px) {
   .hero__title {
     font-size: 2em;
@@ -155,6 +161,10 @@ footer {
   .footer__hello {
     align-self: center;
     text-align: center;
+  }
+
+  .cube {
+    justify-content: center;
   }
 }
 

@@ -5,9 +5,11 @@ Array.from(buttons).map(function(item) {
     if(e.target.innerText === 'EN') {
         renderHero(texts, hero)
         renderFooter(texts, footer)
+        anime()
     } else {
         renderHero(textos, hero)
         renderFooter(textos, footer)
+        anime()
     }
     })
 })
@@ -46,7 +48,10 @@ function createHero(texts) {
 
 function createFooter(texts) {
     return (`
-    <p class="footer__text">${texts.footerText}</p>
+    <div class="footer__text">
+        <p>${texts.footerText}</p>
+        <div class="cube"></div>
+    </div>
     <div class="footer__hello">
         <p class="footer__contact">${texts.footerHello}</p>
         <a class="footer__link" href="mailto:hello@antsociety.dev">hello@antsociety.dev</a>
@@ -69,3 +74,54 @@ const footer = document.querySelector('footer')
 
 renderHero(textos, hero)
 renderFooter(textos, footer)
+
+const anime = () => {
+
+    const stage = document.querySelector('.cube')
+    let scene, camera, renderer, cube
+
+    const animateCube = () => {
+        cube.rotation.x += 0.1
+        cube.rotation.y += 0.1
+    }
+
+    const render = () => {
+        requestAnimationFrame(render)
+        animateCube()
+
+        renderer.render(scene, camera)
+    }
+
+    const createLight = () => {
+        const spotLight = new THREE.SpotLight({color: 'silver'})
+        spotLight.position.set(10, 20, 20)
+        spotLight.castShadow = true
+        scene.add(spotLight)
+    }
+
+    const createACube = () => {
+        const geometry = new THREE.BoxBufferGeometry(1, 1, 1)
+        const material = new THREE.MeshLambertMaterial({color: 'gray'})
+        cube = new THREE.Mesh(geometry, material)
+
+        cube.castShadow = true
+
+        scene.add(cube)
+    }
+
+    scene = new THREE.Scene()
+    camera = new THREE.PerspectiveCamera()
+
+    renderer = new THREE.WebGLRenderer({ alpha: true })
+    renderer.setSize(70, 70)
+    stage.appendChild(renderer.domElement)
+
+    camera.position.z = 3
+
+    createACube()
+    createLight()
+
+    render()
+}
+
+anime()
