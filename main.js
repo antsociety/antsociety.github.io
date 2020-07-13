@@ -28,7 +28,7 @@ const textos = {
     heroTitle2: 'desenvolvimento web',
     heroTitle3: 'sob medida!',
     heroText: 'Somos um coletivo focado em transformar idéias, em produtos que agreguem valor ao usuário, por meio de experiências memoráveis.',
-    footerText: 'Cuidamos do seu projeto de forma orgânica desde a concepção, realizando entregas agéis e evitando disperdício de recursos.',
+    footerText: 'Cuidamos do seu projeto de forma orgânica desde a concepção, realizando entregas ágeis e evitando desperdício de recursos.',
     footerHello: 'Vamos construir algo incrível?'
 }
 
