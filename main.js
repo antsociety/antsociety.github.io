@@ -15,7 +15,6 @@ Array.from(buttons).map(function(item) {
 })
 
 const texts = {
-    heroTitle1: 'Custom',
     heroTitle2: 'web development',
     heroTitle3: 'solutions!',
     heroText: 'We are a collective  focused in transforming ideas into products that add value to your user through memorable experiences.',
@@ -24,7 +23,6 @@ const texts = {
 }
 
 const textos = {
-    heroTitle1: 'Soluções em',
     heroTitle2: 'desenvolvimento web',
     heroTitle3: 'sob medida!',
     heroText: 'Somos um coletivo focado em transformar idéias, em produtos que agreguem valor ao usuário, por meio de experiências memoráveis.',
@@ -35,7 +33,7 @@ const textos = {
 function createHero(texts) {
     return (`
     <h1 class="hero__title">
-        <p>${texts.heroTitle1}</p>
+        <em>Ants Society</em>
         <p>${texts.heroTitle2}</p>
         <p>${texts.heroTitle3}</p>
     </h1>
@@ -81,8 +79,8 @@ const anime = () => {
     let scene, camera, renderer, cube
 
     const animateCube = () => {
-        cube.rotation.x += 0.1
-        cube.rotation.y += 0.1
+        cube.rotation.x += 0.05
+        cube.rotation.y += 0.05
     }
 
     const render = () => {
@@ -113,7 +111,7 @@ const anime = () => {
     camera = new THREE.PerspectiveCamera()
 
     renderer = new THREE.WebGLRenderer({ alpha: true })
-    renderer.setSize(70, 70)
+    renderer.setSize(80, 80)
     stage.appendChild(renderer.domElement)
 
     camera.position.z = 3
